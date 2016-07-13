@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Consultation en ligne de la Marconéo</title>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Marconéo Mis à jour le Ici vous pouvez consulter votre note de fouaille en cherchant le numéro située en bas de votre carte.">
+<style type="text/css">body {font-size: 1.1em; line-height: 1.5em; max-width: 45em; margin: auto; padding: 0 2%;} img {max-width: 100%; display: block; margin: .75em auto;}</style>
+</head>
+
+</head>
+<body>
+<h1>Marconéo</h1> <h3>{{ temps }}</h3> <p>Ici tu peux consulter ta note de fouaille en cherchant le numéro à 10 chiffres situé en bas de ta carte.</p>
+<p> Les zéros de tête sont facultatifs (123456 est équivalent à 0000123456).</p>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="J'aime la meteor" />
+<!--    <div class="g-recaptcha" data-sitekey="6LdaTyQTAAAAAMol1Y-5wlPCiyg1bewaXyMCvJ1V"></div> -->
+</form>
+</body>
+</html>
