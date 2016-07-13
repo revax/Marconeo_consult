@@ -25,6 +25,7 @@ def get_note(request):
     # if a GET (or any other method) we'll create a blank form
     else:
         form = NameForm()
+        # On récupère la date de modification du dernier backup 
         temps =" Mis à jour le %s " % time.strftime('%d/%m/%Y à %H:%M', time.gmtime(os.path.getmtime("/home/bde/last_backup.sql")))
     return render(request, 'note.html', locals())
     
